@@ -1,5 +1,10 @@
-import styles from "./page.module.css";
+"use client"
+import { useTheme } from "next-themes";
+
+import { themeColor } from "@/shared/helpers";
+
 
 export default function Home() {
-  return (<div>vic</div>);
+  const { theme } = useTheme();
+  return (<div style={themeColor(theme)}>vic</div>);
 }

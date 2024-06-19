@@ -1,12 +1,15 @@
+"use client"
+
 import styles from './Header.module.scss';
 
-type ComponentType = {
+import { ContainerComponent } from "@/shared/components/ContainerComponent";
+import { DarkModeButton } from "@/shared/components/DarkMode";
 
-}
-
-export const Header = ({}: ComponentType) => {
-  return (<header className={styles.header}>
-    <p>Where is the world?</p>
-    <p>DarkMode</p>
+export const Header = () => {
+  return (<header>
+    <ContainerComponent className={styles.container}>
+      <p>Where is the world?</p>
+      <DarkModeButton />
+    </ContainerComponent>
   </header>)
 };
