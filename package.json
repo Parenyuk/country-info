@@ -40,10 +40,7 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{css,scss}": "stylelint --fix",
-    "*.{ts,tsx,css,scss}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "*.{css,scss}": ["stylelint --fix"]
   }
 }
