@@ -14,19 +14,23 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "husky": "8.0.3",
     "next": "14.2.4",
+    "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "string-width": "4.2.3"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "babel-eslint": "^10.1.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-unused-imports": "^3.0.0",
     "prettier": "^3.2.2",
     "sass": "^1.69.7",
@@ -36,10 +40,7 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{css,scss}": "stylelint --fix",
-    "*.{ts,tsx,css,scss}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "*.{css,scss}": ["stylelint --fix"]
   }
 }
