@@ -1,7 +1,22 @@
+@import "@/../src/app/mixins.scss";
 
 .cardWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   padding: 48px 0;
+}
+
+@include to768 {
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@include to540 {
+  .cardWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }

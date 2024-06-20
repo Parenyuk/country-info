@@ -1,6 +1,6 @@
 import { fetchAPI } from "@/api";
 import { CardList } from "@/app/(home)/components/CardList";
-import { TopComponent } from "@/app/(home)/components/TopComponent";
+import { Menu } from "@/app/(home)/components/Menu";
 
 export default async function Home() {
   //'https://restcountries.com/v3.1/all?fields=name, population, region, capital, flags, languages'
@@ -10,7 +10,7 @@ export default async function Home() {
   if (data.data) {
     return (
       <>
-        <TopComponent data={data.data} />
+        <Menu data={data.data} />
         <CardList data={data.data} />
       </>
     )

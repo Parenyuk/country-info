@@ -1,15 +1,15 @@
+@import "@/../src/app/mixins.scss";
 
 .cardWrapper {
-  //width: 300px;
   height: auto;
   background-color: white;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .imageContainer {
   position: relative;
   width: 100%;
-  //width: 300px;
   height: 200px;
 
 }
@@ -23,5 +23,19 @@
 }
 
 .title {
+  padding: 12px 0;
 
+  @include font(18px, 130%, 800);
+}
+
+.cardRow {
+  display: flex;
+
+  @include font(16px, 130%, 400);
+
+  &Title {
+    margin-right: 4px;
+
+    @include font(16px, 130%, 600);
+  }
 }

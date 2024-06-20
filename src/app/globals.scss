@@ -1,3 +1,6 @@
+// stylelint-disable
+@import "@/../src/app/mixins.scss";
+
 html, body {
   scroll-behavior: smooth;
   color: #222;
@@ -25,6 +28,11 @@ html, body {
 
 [data-theme='light'] header {
   box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+}
+
+[data-theme='dark'] .card {
+  color: #fff;
+  background: #222;
 }
 
 header {
