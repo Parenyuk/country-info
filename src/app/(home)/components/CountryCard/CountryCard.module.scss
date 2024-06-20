@@ -39,3 +39,17 @@
     @include font(16px, 130%, 600);
   }
 }
+
+
+@include to768 {
+  .imageContainer {
+    width: 400px;
+  }
+}
+
+
+@include to540 {
+  .imageContainer {
+    width: 80vw;
+  }
+}

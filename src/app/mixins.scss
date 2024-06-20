@@ -47,17 +47,17 @@
 }
 
 
-//@mixin from1240 {
-//  @media screen and (width >= 1240px) {
-//    @content;
-//  }
-//}
-//
-//@mixin to1240 {
-//  @media screen and (width < 1240px) {
-//    @content;
-//  }
-//}
+@mixin from1280 {
+  @media screen and (width >= 1280px) {
+    @content;
+  }
+}
+
+@mixin to1280 {
+  @media screen and (width < 1280px) {
+    @content;
+  }
+}
 
 @mixin to1440 {
   @media screen and (width < 1440px) {
