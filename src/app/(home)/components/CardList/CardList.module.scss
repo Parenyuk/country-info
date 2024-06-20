@@ -1,0 +1,38 @@
+@import "@/../src/app/mixins";
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 48px 0;
+}
+
+@include to1280 {
+  .cardWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+  @include to1024 {
+  .cardWrapper {
+    padding: 48px 20px !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@include to768 {
+  .cardWrapper {
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 400px);
+  }
+}
+
+@include to540 {
+  .cardWrapper {
+    grid-template-columns: repeat(1, 80vw);
+  }
+}
