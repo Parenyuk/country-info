@@ -2,6 +2,7 @@ import styles from './CardList.module.scss';
 
 import { CountryCard } from "@/app/(home)/components/CountryCard";
 import { ContainerComponent } from "@/shared/components/ContainerComponent";
+import { CountryType } from "@/shared/types";
 
 type ComponentType = {
     data: CountryType[];

@@ -5,3 +5,11 @@ export const formatPopulation = (population: number) => {
   const formattedPopulation = populationInMillions.toFixed(3);
   return `${formattedPopulation} million`;
 }
+
+export const formatCountryLink = (country: string) => {
+  return country.replace(/ /g,'_');
+}
+
+export const updateLink = (country: string) => {
+  return country.replace(/_/g, ' ');
+}
