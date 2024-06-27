@@ -1,16 +1,18 @@
 import cn from "classnames";
 import Image from 'next/image';
+import Link from "next/link";
 
 import styles from './CountryCard.module.scss';
 
-import { formatPopulation } from "@/shared/helpers";
+import {formatCountryLink, formatPopulation} from "@/shared/helpers";
+import { CountryType } from "@/shared/types";
 
 type ComponentType = {
     card: CountryType;
 }
 
 export const CountryCard = ({ card }: ComponentType) => {
-  return (<div className={cn(styles.cardWrapper, 'card')}>
+  return (<Link href={`/${formatCountryLink(card.name.common)}`} className={cn(styles.cardWrapper, 'card')}>
     <div className={styles.imageContainer}>
       <Image src={card.flags.png} layout={'fill'} alt={card.name.common} className={styles.image} />
     </div>
@@ -31,5 +33,5 @@ export const CountryCard = ({ card }: ComponentType) => {
         </div>
       </div>
     </div>
-  </div>)
+  </Link>)
 };

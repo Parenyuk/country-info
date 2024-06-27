@@ -1,4 +1,4 @@
-type CountryType = {
+export type CountryType = {
     name: Name;
     tld: string[];
     cca2: string;
@@ -17,6 +17,7 @@ type CountryType = {
     translations: Translations;
     latlng: number[];
     landlocked: boolean;
+    borders: string[];
     area: number;
     demonyms: Demonyms;
     flag: string;
@@ -39,14 +40,14 @@ type Name = {
 }
 
 type NativeName = {
-    fra: {
+    [key: string]: {
         official: string;
         common: string;
     };
 }
 
 type Currencies = {
-    XPF: CurrencyDetails;
+    [key: string]: CurrencyDetails;
 }
 
 type CurrencyDetails = {
@@ -63,42 +64,14 @@ type Languages = {
     fra: string;
 }
 
-type Translations = {
-    ara: Translation;
-    bre: Translation;
-    ces: Translation;
-    cym: Translation;
-    deu: Translation;
-    est: Translation;
-    fin: Translation;
-    fra: Translation;
-    hrv: Translation;
-    hun: Translation;
-    ita: Translation;
-    jpn: Translation;
-    kor: Translation;
-    nld: Translation;
-    per: Translation;
-    pol: Translation;
-    por: Translation;
-    rus: Translation;
-    slk: Translation;
-    spa: Translation;
-    srp: Translation;
-    swe: Translation;
-    tur: Translation;
-    urd: Translation;
-    zho: Translation;
-}
+type Translations = Record<string, Translation>;
 
 type Translation = {
     official: string;
     common: string;
 }
 
-type Demonyms = {
-    eng: Demonym;
-}
+type Demonyms = Record<string, Demonym>
 
 type Demonym = {
     f: string;

@@ -1,0 +1,67 @@
+@import "@/../src/app/mixins";
+
+ .pageContainer {
+  padding: 80px 0;
+}
+
+ .contentWrapper {
+   display: flex;
+   gap: 120px;
+   margin-top: 80px;
+ }
+
+ .imageContainer {
+   position: relative;
+   width: 360px;
+   height: 280px;
+
+ }
+
+ .image {
+   border-radius: 12px;
+ }
+
+ .infoBlock {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex: 1;
+ }
+
+ .title {
+
+   @include font(32px, 130%, 600);
+ }
+
+.rowTitle {
+  @include font(16px, 130%, 600);
+}
+
+.rowValue {
+  margin-left: 4px;
+
+  @include font(16px, 130%, 400);
+}
+
+ .infoBlockContent {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .infoRow {
+   display: flex;
+   align-items: center;
+ }
+
+.borderTitle {
+  min-width: 150px;
+
+  @include font(16px, 130%, 600);
+}
+
+.borders {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+}
