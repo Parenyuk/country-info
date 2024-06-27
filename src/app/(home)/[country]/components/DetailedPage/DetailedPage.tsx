@@ -61,7 +61,7 @@ export const DetailedPage = ({ country }: ComponentType) => {
             </div>
           </div>
           <div className={styles.infoBlockBottom}>
-            <div className={styles.infoRow}>
+            <div className={styles.infoRowBottom}>
               <p className={styles.borderTitle}>Border Countries: </p>
               {
                 country?.borders?.length > 0 ? (
@@ -72,7 +72,6 @@ export const DetailedPage = ({ country }: ComponentType) => {
                   'No border countries founds'
                 )
               }
-
             </div>
           </div>
         </div>

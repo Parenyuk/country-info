@@ -14,11 +14,10 @@
    position: relative;
    width: 360px;
    height: 280px;
-
  }
 
  .image {
-   border-radius: 12px;
+   border-radius: 12px !important;
  }
 
  .infoBlock {
@@ -47,10 +46,16 @@
    justify-content: space-between;
  }
 
- .infoRow {
+ .infoRow, .infoRowBottom {
    display: flex;
    align-items: center;
+   margin-bottom: 12px;
  }
+
+.infoBlockBottom {
+  display: flex;
+  justify-content: space-between;
+}
 
 .borderTitle {
   min-width: 150px;
@@ -63,4 +68,68 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 8px;
+}
+
+@include to1280 {
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin-top: 80px;
+  }
+
+  .imageContainer {
+    position: relative;
+    align-self: center;
+  }
+
+  .title {
+    margin-bottom: 48px;
+  }
+}
+
+@include to1024 {
+  .pageContainer {
+      padding: 80px 20px !important;
+    }
+}
+
+@include to768 {
+  .infoBlockContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .borders {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+}
+
+@include to540 {
+  .imageContainer {
+    position: relative;
+    align-self: center;
+    width: 100%;
+  }
+
+  .infoRowBottom {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+
+  .borders {
+    width: 100%;
+    display: flex;
+    margin-top: 24px;
+   flex-wrap: wrap;
+  }
+
+  .borderTitle {
+    min-width: 100%;
+  }
 }
