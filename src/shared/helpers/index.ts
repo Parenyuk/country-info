@@ -7,9 +7,9 @@ export const formatPopulation = (population: number) => {
 }
 
 export const formatCountryLink = (country: string) => {
- return country.replace(/ /g,'_');
+  return country.replace(/ /g,'_');
 }
 
 export const updateLink = (country: string) => {
-    return country.replace(/_/g, ' ');
+  return country.replace(/_/g, ' ');
 }

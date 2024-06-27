@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import styles from './CountryCard.module.scss';
 
-import {formatCountryLink, formatPopulation} from "@/shared/helpers";
+import { formatCountryLink, formatPopulation } from "@/shared/helpers";
 import { CountryType } from "@/shared/types";
 
 type ComponentType = {

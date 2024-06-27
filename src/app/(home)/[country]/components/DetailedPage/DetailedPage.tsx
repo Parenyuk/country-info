@@ -5,19 +5,14 @@ import styles from './DetailedPage.module.scss';
 import { BorderCountry } from "@/app/(home)/[country]/components/BorderCountry";
 import { BackButton } from "@/shared/components/BackButton";
 import { ContainerComponent } from "@/shared/components/ContainerComponent";
+import { formatPopulation } from "@/shared/helpers";
 import { CountryType } from "@/shared/types";
-import {formatPopulation} from "@/shared/helpers";
 
 type ComponentType = {
     country: CountryType;
 }
 
 export const DetailedPage = ({ country }: ComponentType) => {
-  console.log('country111', country.borders);
-
-  // const currencyKey = Object.keys(country.currencies)[0];
-  // const currencyDetails = country.currencies[currencyKey];
-
   return (
     <ContainerComponent tag={'section'} className={styles.pageContainer}>
       <BackButton />
